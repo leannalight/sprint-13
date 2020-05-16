@@ -25,11 +25,10 @@ router.get('/users', (req, res) => {
   });
 });
 
-// eslint-disable-next-line no-underscore-dangle
 router.get('/users/:_id', (req, res) => {
   // eslint-disable-next-line consistent-return
   readUsersData().then((data) => {
-    // eslint-disable-next-line no-underscore-dangle, arrow-parens
+    // eslint-disable-next-line arrow-parens
     const userFind = data.find(item => item._id === req.params._id);
     if (!userFind) {
       return res.status(404).json({ message: 'Нет пользователя с таким id' });
