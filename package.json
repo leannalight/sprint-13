@@ -1,0 +1,35 @@
+{
+  "name": "sprint-12-mesto",
+  "version": "1.0.0",
+  "description": "creating server with API, node.js and express.js",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.19.0",
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": " npx nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leannalight/sprint-12-mesto.git"
+  },
+  "author": "Anna Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leannalight/sprint-12-mesto/issues"
+  },
+  "homepage": "https://github.com/leannalight/sprint-12-mesto#readme",
+  "keywords": [
+    "backend",
+    "junior",
+    "learning backend"
+  ]
+}
