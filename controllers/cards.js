@@ -2,18 +2,17 @@ const Card = require('../models/card');
 
 module.exports.getCards = (req, res) => {
   Card.find({})
+    .populate('owner')
     .then((cards) => res.send({ data: cards }))
-    .catch(() => res.status(500).send({ message: 'Произошла ошибка' }));
+    .catch((error) => res.status(500).send({ message: error.message }));
 };
 
 module.exports.createCard = (req, res) => {
   const { name, link } = req.body;
-  // eslint-disable-next-line no-console
-  console.log(req.user._id);
 
-  Card.create({ name, link })
+  Card.create({ name, link, owner: req.user._id })
     .then((card) => res.send({ data: card }))
-    .catch(() => res.status(500).send({ message: 'Произошла ошибка' }));
+    .catch((error) => res.status(500).send({ message: error.message }));
 };
 
 module.exports.deleteCardbyId = (req, res) => {
@@ -25,5 +24,5 @@ module.exports.deleteCardbyId = (req, res) => {
         res.status(404).send({ message: 'Нет карточки с таким id' });
       }
     })
-    .catch(() => res.status(500).send({ message: 'Произошла ошибка' }));
+    .catch((error) => res.status(500).send({ message: error.message }));
 };
