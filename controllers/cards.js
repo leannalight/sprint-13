@@ -8,6 +8,8 @@ module.exports.getCards = (req, res) => {
 
 module.exports.createCard = (req, res) => {
   const { name, link } = req.body;
+  // eslint-disable-next-line no-console
+  console.log(req.user._id);
 
   Card.create({ name, link })
     .then((card) => res.send({ data: card }))
