@@ -1,7 +1,7 @@
 {
-  "name": "sprint-12-mesto",
+  "name": "sprint-13",
   "version": "1.0.0",
-  "description": "creating server with API, node.js and express.js",
+  "description": "backend project, API REST, node.js, express.js and MongoDB",
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leannalight/sprint-12-mesto.git"
+    "url": "git+https://github.com/leannalight/sprint-13.git"
   },
   "author": "Anna Lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leannalight/sprint-12-mesto/issues"
+    "url": "https://github.com/leannalight/sprint-13/issues"
   },
-  "homepage": "https://github.com/leannalight/sprint-12-mesto#readme",
+  "homepage": "https://github.com/leannalight/sprint-13#readme",
   "keywords": [
     "backend",
     "junior",
