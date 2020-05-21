@@ -5,12 +5,21 @@ module.exports.getCards = (req, res) => {
     .populate('owner')
     .then((cards) => {
       if (cards.length === 0) {
-        return res.status(404).send({ message: 'Карточки отсутствуют в списке' });
+        return res.status(404).send({ message: 'Список карточек пуст' });
       }
       return res.send({ data: cards });
     })
-    .catch((error) => res.status(500).send({ message: error.message }));
+    .catch((error) => {
+      if (error.name === error.ValidationError) {
+        return res.status(400).send({ message: error.message });
+      }
+      if (error.name === error.CastError) {
+        return res.status(400).send({ message: error.message });
+      }
+      return res.status(500).send({ message: error.message });
+    });
 };
+
 
 module.exports.createCard = (req, res) => {
   const { name, link } = req.body;

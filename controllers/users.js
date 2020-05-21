@@ -2,8 +2,21 @@ const User = require('../models/user');
 
 module.exports.getUsers = (req, res) => {
   User.find({})
-    .then((users) => res.send({ data: users }))
-    .catch((error) => res.status(500).send({ message: error.message }));
+    .then((users) => {
+      if (users.length === 0) {
+        return res.status(404).send({ message: 'Список пользователей пуст' });
+      }
+      return res.send({ data: users });
+    })
+    .catch((error) => {
+      if (error.name === error.ValidationError) {
+        return res.status(400).send({ message: error.message });
+      }
+      if (error.name === error.CastError) {
+        return res.status(400).send({ message: error.message });
+      }
+      return res.status(500).send({ message: error.message });
+    });
 };
 
 module.exports.getUserbyId = (req, res) => {
@@ -15,7 +28,15 @@ module.exports.getUserbyId = (req, res) => {
       }
       return res.send({ data: userFind });
     })
-    .catch((error) => res.status(500).send({ message: error.message }));
+    .catch((error) => {
+      if (error.name === error.ValidationError) {
+        return res.status(400).send({ message: error.message });
+      }
+      if (error.name === error.CastError) {
+        return res.status(400).send({ message: error.message });
+      }
+      return res.status(500).send({ message: error.message });
+    });
 };
 
 module.exports.createUser = (req, res) => {
@@ -23,5 +44,13 @@ module.exports.createUser = (req, res) => {
 
   User.create({ name, about, avatar })
     .then((user) => res.send({ data: user }))
-    .catch((error) => res.status(500).send({ message: error.message }));
+    .catch((error) => {
+      if (error.name === error.ValidationError) {
+        return res.status(400).send({ message: error.message });
+      }
+      if (error.name === error.CastError) {
+        return res.status(400).send({ message: error.message });
+      }
+      return res.status(500).send({ message: error.message });
+    });
 };
