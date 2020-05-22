@@ -10,10 +10,10 @@ module.exports.getCards = (req, res) => {
       return res.send({ data: cards });
     })
     .catch((error) => {
-      if (error.name === error.ValidationError) {
+      if (error.name === 'ValidationError') {
         return res.status(400).send({ message: error.message });
       }
-      if (error.name === error.CastError) {
+      if (error.name === 'CastError') {
         return res.status(400).send({ message: error.message });
       }
       return res.status(500).send({ message: error.message });
@@ -27,10 +27,10 @@ module.exports.createCard = (req, res) => {
   Card.create({ name, link, owner: req.user._id })
     .then((card) => res.send({ data: card }))
     .catch((error) => {
-      if (error.name === error.ValidationError) {
+      if (error.name === 'ValidationError') {
         return res.status(400).send({ message: error.message });
       }
-      if (error.name === error.CastError) {
+      if (error.name === 'CastError') {
         return res.status(400).send({ message: error.message });
       }
       return res.status(500).send({ message: error.message });
@@ -47,10 +47,10 @@ module.exports.deleteCardbyId = (req, res) => {
       return res.send({ data: cardFind });
     })
     .catch((error) => {
-      if (error.name === error.ValidationError) {
+      if (error.name === 'ValidationError') {
         return res.status(400).send({ message: error.message });
       }
-      if (error.name === error.CastError) {
+      if (error.name === 'CastError') {
         return res.status(400).send({ message: error.message });
       }
       return res.status(500).send({ message: error.message });

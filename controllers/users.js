@@ -9,10 +9,10 @@ module.exports.getUsers = (req, res) => {
       return res.send({ data: users });
     })
     .catch((error) => {
-      if (error.name === error.ValidationError) {
+      if (error.name === 'ValidationError') {
         return res.status(400).send({ message: error.message });
       }
-      if (error.name === error.CastError) {
+      if (error.name === 'CastError') {
         return res.status(400).send({ message: error.message });
       }
       return res.status(500).send({ message: error.message });
@@ -29,10 +29,10 @@ module.exports.getUserbyId = (req, res) => {
       return res.send({ data: userFind });
     })
     .catch((error) => {
-      if (error.name === error.ValidationError) {
+      if (error.name === 'ValidationError') {
         return res.status(400).send({ message: error.message });
       }
-      if (error.name === error.CastError) {
+      if (error.name === 'CastError') {
         return res.status(400).send({ message: error.message });
       }
       return res.status(500).send({ message: error.message });
@@ -45,10 +45,10 @@ module.exports.createUser = (req, res) => {
   User.create({ name, about, avatar })
     .then((user) => res.send({ data: user }))
     .catch((error) => {
-      if (error.name === error.ValidationError) {
+      if (error.name === 'ValidationError') {
         return res.status(400).send({ message: error.message });
       }
-      if (error.name === error.CastError) {
+      if (error.name === 'CastError') {
         return res.status(400).send({ message: error.message });
       }
       return res.status(500).send({ message: error.message });
