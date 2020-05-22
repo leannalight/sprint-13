@@ -22,11 +22,10 @@ module.exports.getUsers = (req, res) => {
 module.exports.getUserbyId = (req, res) => {
   User.findById(req.params.id)
     .then((user) => {
-      const userFind = user.find((item) => item.id === req.params.id);
-      if (!userFind) {
-        res.status(404).send({ message: 'Нет пользователя с таким id' });
+      if (!user) {
+        res.status(404).send({ message: 'Пользователь не найден' });
       }
-      return res.send({ data: userFind });
+      return res.send({ data: user });
     })
     .catch((error) => {
       if (error.name === 'ValidationError') {
