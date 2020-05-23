@@ -2,9 +2,9 @@
 
 Backend project, API REST, node.js, express.js and MongoDB
 
-## The latest version v0.0.3
+## The latest version v0.0.4
 
-git tag -a v0.0.3 -m "my version v0.0.3"
+git tag -a v0.0.4 -m "my version v0.0.4"
 
 ## Technologies used in the project:
 
