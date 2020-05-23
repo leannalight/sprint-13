@@ -42,8 +42,9 @@ module.exports.deleteCardbyId = (req, res) => {
     .then((card) => {
       if (!card) {
         res.status(404).send({ message: 'Карточка не найдена' });
+      } else {
+        res.send({ data: card });
       }
-      return res.send({ data: card });
     })
     .catch((error) => {
       if (error.name === 'ValidationError') {
