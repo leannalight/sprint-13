@@ -1,6 +1,6 @@
 {
   "name": "sprint-13",
-  "version": "1.0.0",
+  "version": "0.0.5",
   "description": "backend project, API REST, node.js, express.js and MongoDB",
   "main": "app.js",
   "dependencies": {
@@ -23,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/leannalight/sprint-13.git"
   },
-  "author": "Anna Lee",
+  "author": "Anna Lee <annikkacloud@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/leannalight/sprint-13/issues"
