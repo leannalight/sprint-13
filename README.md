@@ -1,9 +1,7 @@
 # sprint-13
-
-Backend project, API REST, node.js, express.js and MongoDB
-
 ## version v0.0.5
 ## Цель: продолжение изучения серверной разработки на Node.js и веб-фреймворка Express. В этом проекте мы продолжаем работу над [спринт-12](https://github.com/leannalight/sprint-12-mesto), который является бэкенд-частью проекта [Место](https://leannalight.github.io/Mesto-project-Yandex/).
+### Начали делать REST API проекта Место и связали его с базой данных
 
 ## Что дополнили в проекте?
 
