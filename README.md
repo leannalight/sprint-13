@@ -26,7 +26,7 @@
 - папки public и data удалены;
 
 ### Инструкция по установке:
-1. для клонирования используйте ```git clone https://github.com/leannalight/sprint-12-mesto```
+1. для клонирования используйте ```git clone https://github.com/leannalight/sprint-13```
 2. для переустановки пакетов ```npm i```.
 3. команда ```npm run start``` запускает сервер на ```localhost:3000```;
 4. команда ```npm run dev``` запускает сервер на ```localhost:3000 с хот релоудом```;
