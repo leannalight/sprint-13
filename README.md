@@ -3,7 +3,7 @@
 Backend project, API REST, node.js, express.js and MongoDB
 
 ## version v0.0.5
-## Цель: продолжение изучения серверной разработки на Node.js и веб-фреймворка Express. В этом проекте мы продолжаем работу над [спринт-12](https://github.com/leannalight/sprint-12-mesto), которая является бэкенд-частью проекта [Место](https://leannalight.github.io/Mesto-project-Yandex/).
+## Цель: продолжение изучения серверной разработки на Node.js и веб-фреймворка Express. В этом проекте мы продолжаем работу над [спринт-12](https://github.com/leannalight/sprint-12-mesto), который является бэкенд-частью проекта [Место](https://leannalight.github.io/Mesto-project-Yandex/).
 
 ## Что дополнили в проекте?
 
