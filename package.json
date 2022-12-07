@@ -4,7 +4,7 @@
   "description": "backend project, API REST, node.js, express.js and MongoDB",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.14",
     "mongoose-validator": "^2.1.0"
   },
